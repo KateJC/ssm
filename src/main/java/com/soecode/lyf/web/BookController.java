@@ -53,8 +53,7 @@ public class BookController {
 	}
 
 	// ajax json
-	@RequestMapping(value = "/{bookId}/appoint", method = RequestMethod.POST, produces = {
-			"application/json; charset=utf-8" })
+	@RequestMapping(value = "/{bookId}/appoint", method = RequestMethod.POST, produces = {"application/json; charset=utf-8" })
 	@ResponseBody
 	private Result<AppointExecution> appoint(@PathVariable("bookId") Long bookId, @RequestParam("studentId") Long studentId) {
 		if (studentId == null || studentId.equals("")) {
